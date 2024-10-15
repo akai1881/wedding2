@@ -70,6 +70,15 @@
                 font-style: normal;
                 font-weight: 400;
             }
+            @font-face {
+                font-family: "Tomatoes";
+                src: url("./fonts/TOMATOES.ttf") format("embedded-opentype"),
+                    /* Internet Explorer */ url("./fonts/TOMATOES.ttf") format("woff2"),
+                    /* Super Modern Browsers */ url("./fonts/TOMATOES.ttf") format("woff"),
+                    /* Pretty Modern Browsers */ url("./fonts/TOMATOES.ttf") format("truetype"),
+                    /* Safari, Android, iOS */ url("./fonts/TOMATOES.ttf") format("svg"); /* Legacy iOS */
+                font-style: normal;
+            }
             /*
               1. Use a more-intuitive box-sizing model.
             */
@@ -279,6 +288,25 @@
                 height: 466px;
             }
 
+            .invitation-names {
+                font-family: "Felixti";
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                letter-spacing: 10px;
+                font-size: 36px;
+            }
+
+            .invitation-ampersand {
+                font-family: "Tomatoes";
+                letter-spacing: 0;
+                font-size: 18px;
+            }
+
+            .invitation-amperand {
+                display: block;
+            }
+
             .invitation-img img {
                 display: block;
                 width: 100%;
@@ -389,7 +417,7 @@
             </div>
             <h1 class="intro_title">
                 <span data-sm-text="BRIDE" title="Бакай" data-aos="fade-up" data-aos-duration="1800">B</span>
-                <span class="ampersand" data-aos="fade-right" data-aos-duration="3000">&</span>
+                <span class="ampersand" data-aos="fade-right" data-aos-duration="2000">&</span>
                 <span data-sm-text="GROOM" title="Үмүт" data-aos="fade-up" data-aos-duration="1800">Y</span>
             </h1>
             <div data-aos="fade-up" data-aos-duration="2200">
@@ -400,6 +428,11 @@
         <!-- Invitation Text Section -->
         <section class="section invitation-text">
             <div class="invitation-wrapper">
+                <h2 class="invitation-names">
+                    <span data-sm-text="BRIDE" title="Бакай" data-aos="fade-up" data-aos-duration="1800">BAKAI</span>
+                    <span data-aos="fade-up" class="invitation-ampersand" data-aos-duration="2000">and</span>
+                    <span data-sm-text="GROOM" title="Үмүт" data-aos="fade-up" data-aos-duration="1800">YMYT</span>
+                </h2>
                 <h2 class="invitation-title" data-aos="fade-down" data-aos-duration="1200">Приглашение!</h2>
                 <div class="divider"></div>
                 <p data-aos="fade-down" data-aos-duration="1800">
