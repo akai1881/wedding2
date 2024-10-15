@@ -33,12 +33,42 @@
                 font-style: normal;
             }
             @font-face {
+                font-family: "Felixti";
+                src: url("./fonts/Felixti.ttf") format("embedded-opentype"),
+                    /* Internet Explorer */ url("./fonts/Felixti.ttf") format("woff2"),
+                    /* Super Modern Browsers */ url("./fonts/Felixti.ttf") format("woff"),
+                    /* Pretty Modern Browsers */ url("./fonts/Felixti.ttf") format("truetype"),
+                    /* Safari, Android, iOS */ url("./fonts/Felixti.ttf") format("svg"); /* Legacy iOS */
+                font-style: normal;
+                font-weight: 400;
+            }
+            @font-face {
                 font-family: "Great Vibes";
                 src: url("./fonts/GreatVibes-Regular.ttf") format("embedded-opentype"),
                     /* Internet Explorer */ url("./fonts/GreatVibes-Regular.ttf") format("woff2"),
                     /* Super Modern Browsers */ url("./fonts/GreatVibes-Regular.ttf") format("woff"),
                     /* Pretty Modern Browsers */ url("./fonts/GreatVibes-Regular.ttf") format("truetype"),
                     /* Safari, Android, iOS */ url("./fonts/GreatVibes-Regular.ttf") format("svg"); /* Legacy iOS */
+            }
+            @font-face {
+                font-family: "Noto Serif Display";
+                src: url("./fonts/NotoSerifDisplay-Light.ttf") format("embedded-opentype"),
+                    /* Internet Explorer */ url("./fonts/NotoSerifDisplay-Light.ttf") format("woff2"),
+                    /* Super Modern Browsers */ url("./fonts/NotoSerifDisplay-Light.ttf") format("woff"),
+                    /* Pretty Modern Browsers */ url("./fonts/NotoSerifDisplay-Light.ttf") format("truetype"),
+                    /* Safari, Android, iOS */ url("./fonts/NotoSerifDisplay-Light.ttf") format("svg"); /* Legacy iOS */
+                font-style: normal;
+                font-weight: 300;
+            }
+            @font-face {
+                font-family: "Noto Serif Display";
+                src: url("./fonts/NotoSerifDisplay-Regular.ttf") format("embedded-opentype"),
+                    /* Internet Explorer */ url("./fonts/NotoSerifDisplay-Regular.ttf") format("woff2"),
+                    /* Super Modern Browsers */ url("./fonts/NotoSerifDisplay-Regular.ttf") format("woff"),
+                    /* Pretty Modern Browsers */ url("./fonts/NotoSerifDisplay-Regular.ttf") format("truetype"),
+                    /* Safari, Android, iOS */ url("./fonts/NotoSerifDisplay-Regular.ttf") format("svg"); /* Legacy iOS */
+                font-style: normal;
+                font-weight: 400;
             }
             /*
               1. Use a more-intuitive box-sizing model.
@@ -122,7 +152,7 @@
             .intro {
                 position: relative;
                 color: #3a3939;
-                padding: 180px 20px 235px 20px;
+                padding: 180px 20px 100px 20px;
             }
 
             .intro h1 {
@@ -142,11 +172,11 @@
 
             .intro h1 span {
                 color: #45493a;
-                font-family: "EB Garamond";
-                font-style: italic;
-                font-weight: 400;
+                font-family: "Felixti";
                 font-size: 48px;
                 line-height: 70px;
+                font-style: normal;
+                font-weight: 400;
             }
 
             .ampersand {
@@ -194,9 +224,10 @@
             }
             /* Invitation Text Section */
             .invitation-text {
-                background-color: #c6ced0;
+                /* background-color: #c6ced0;*/
                 position: relative;
             }
+            /* Invitation Text Section
             .invitation-text::after {
                 content: "";
                 position: absolute;
@@ -209,17 +240,21 @@
                 background-image: url(./moment-decor-mobile3.webp);
                 pointer-events: none;
             }
+                 */
             .invitation-text p {
                 font-size: 21px;
-                line-height: 1.6;
+                line-height: 1;
                 text-align: center;
                 font-family: "Noto Serif Display", serif;
-                font-weight: 400;
                 color: #384847;
-                font-style: italic;
+                font-optical-sizing: auto;
+                font-style: normal;
+                font-variation-settings: "wdth" 100;
+                color: #3a3939;
+                font-weight: 300;
             }
             .invitation-wrapper {
-                padding: 120px 0 60px;
+                padding: 110px 0 20px;
                 display: flex;
                 flex-direction: column;
                 gap: 25px;
@@ -268,9 +303,9 @@
 
             .details-date {
                 color: #45493a;
-                font-size: 36px;
+                font-size: 40px;
                 font-family: "Cormorant", Arial, sans-serif;
-                font-weight: 500;
+                font-weight: 400;
             }
 
             .column {
@@ -345,19 +380,19 @@
     <body>
         <!-- Intro Section -->
         <section class="section intro">
-            <picture>
+            <!-- <picture>
                 <source srcset="./main.webp" media="(min-width: 500px)" />
                 <img class="intro_main-img" src="./main-mobile.webp" alt="img" />
-            </picture>
+            </picture> -->
             <div data-aos="fade-up" data-aos-duration="1200">
-                <p class="intro_wedding-date">01 ноября 2024 года</p>
+                <!-- <p class="intro_wedding-date">01 ноября 2024 года</p> -->
             </div>
             <h1 class="intro_title">
-                <span data-sm-text="BRIDE" title="Бакай" data-aos="fade-up" data-aos-duration="1800">Бакай</span>
-                <span class="ampersand" data-aos="fade-up" data-aos-duration="2000">&</span>
-                <span data-sm-text="GROOM" title="Үмүт" data-aos="fade-up" data-aos-duration="1800">Үмүт</span>
+                <span data-sm-text="BRIDE" title="Бакай" data-aos="fade-up" data-aos-duration="1800">B</span>
+                <span class="ampersand" data-aos="fade-right" data-aos-duration="3000">&</span>
+                <span data-sm-text="GROOM" title="Үмүт" data-aos="fade-up" data-aos-duration="1800">Y</span>
             </h1>
-            <div data-aos="fade-up" data-aos-duration="2000">
+            <div data-aos="fade-up" data-aos-duration="2200">
                 <p class="intro_wedding-date">С этого момента и навсегда</p>
             </div>
         </section>
@@ -372,9 +407,9 @@
                     чудесный день!
                 </p>
 
-                <div class="invitation-img">
+                <!-- <div class="invitation-img">
                     <img src="./image.webp" />
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -395,7 +430,7 @@
             </div>
         </section>
 
-        <section class="section intro">
+        <!-- <section class="section intro">
             <picture>
                 <source srcset="./main.webp" media="(min-width: 500px)" />
                 <img class="intro_main-img" src="./footer-mobile.webp" alt="img" />
@@ -406,7 +441,7 @@
                 <span class="ampersand">&</span>
                 <span data-sm-text="GROOM" title="Үмүт">Үмүт</span>
             </h1>
-        </section>
+        </section> -->
         <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
         <script type="text/javascript">
             var map;
