@@ -71,6 +71,16 @@
                 font-weight: 400;
             }
             @font-face {
+                font-family: "josephsophia";
+                src: url("./fonts/josephsophia.ttf") format("embedded-opentype"),
+                    /* Internet Explorer */ url("./fonts/josephsophia.ttf") format("woff2"),
+                    /* Super Modern Browsers */ url("./fonts/josephsophia.ttf") format("woff"),
+                    /* Pretty Modern Browsers */ url("./fonts/josephsophia.ttf") format("truetype"),
+                    /* Safari, Android, iOS */ url("./fonts/josephsophia.ttf") format("svg"); /* Legacy iOS */
+                font-style: normal;
+                font-weight: 400;
+            }
+            @font-face {
                 font-family: "Noto Serif Display";
                 src: url("./fonts/NotoSerifDisplay-Regular.ttf") format("embedded-opentype"),
                     /* Internet Explorer */ url("./fonts/NotoSerifDisplay-Regular.ttf") format("woff2"),
@@ -226,10 +236,9 @@
                 background-color: #384847;
             }
             .intro h2 {
-                font-size: 24px;
-                font-family: "EB Garamond";
+                font-size: 18px;
+                font-family: "josephsophia";
                 font-weight: 400;
-                padding-top: 20px;
                 font-style: italic;
             }
 
@@ -299,7 +308,7 @@
             }
 
             .invitation-names {
-                font-family: "Felixti";
+                font-family: "josephsophia";
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -310,7 +319,7 @@
             .invitation-ampersand {
                 font-family: "Tomatoes";
                 letter-spacing: 0;
-                font-size: 18px;
+                font-size: 14px;
             }
 
             .invitation-amperand {
@@ -341,30 +350,27 @@
             }
 
             .details-date {
-                color: #45493a;
-                font-size: 28px;
-                font-family: "Cormorant", Arial, sans-serif;
+                font-size: 18px;
+                font-family: "Noto Serif Display", serif;
                 font-weight: 400;
                 position: relative;
             }
 
             .details-date.date::before {
-                color: #45493a;
                 content: "" !important;
                 position: absolute;
                 top: 57%;
                 transform: translateY(-50%);
                 width: 40px;
-                left: 50px;
+                left: 60px;
                 height: 1px;
                 background-color: #384847;
             }
             .details-date.date::after {
-                color: #45493a;
                 content: "" !important;
                 position: absolute;
                 top: 57%;
-                right: 50px;
+                right: 60px;
                 width: 40px;
                 transform: translateY(-50%);
                 height: 1px;
@@ -385,8 +391,8 @@
             }
 
             .outro p {
-                font-family: "GoodVibes", cursive;
-                font-size: 28px;
+                font-family: "Noto Serif Display", serif;
+                font-size: 24px;
                 text-align: center;
                 font-weight: 500;
             }
@@ -411,7 +417,7 @@
                     font-size: 36px;
                 }
                 .intro h2 {
-                    font-size: 20px;
+                    font-size: 28px;
                 }
             }
             .intro_main-img {
@@ -429,8 +435,8 @@
             }
 
             .location {
-                font-family: "Cormorant", Arial, sans-serif;
-                font-size: 21px;
+                font-family: "Noto Serif Display", serif;
+                font-size: 18px;
                 text-align: center;
                 font-weight: 500;
                 color: #4a4a4a;
@@ -500,6 +506,11 @@
     <body>
         <!-- Intro Section -->
         <section class="section intro">
+            <h2 class="invitation-names">
+                <span data-sm-text="BRIDE" title="Бакай" data-aos="fade-up" data-aos-duration="1800">Bakai</span>
+                <span data-aos="fade-up" class="invitation-ampersand" data-aos-duration="2000">and</span>
+                <span data-sm-text="GROOM" title="Үмүт" data-aos="fade-up" data-aos-duration="1800">Ymyt</span>
+            </h2>
             <picture data-aos="zoom-in" data-aos-duration="1800">
                 <source srcset="./main-image.webp" media="(min-width: 500px)" />
                 <img class="" src="./main-image.webp" alt="img" />
@@ -515,12 +526,6 @@
             <div data-aos="fade-up" data-aos-duration="2200">
                 <p class="intro_wedding-date">С этого момента и навсегда</p>
             </div>
-
-            <h2 class="invitation-names">
-                <span data-sm-text="BRIDE" title="Бакай" data-aos="fade-up" data-aos-duration="1800">BAKAI</span>
-                <span data-aos="fade-up" class="invitation-ampersand" data-aos-duration="2000">and</span>
-                <span data-sm-text="GROOM" title="Үмүт" data-aos="fade-up" data-aos-duration="1800">YMYT</span>
-            </h2>
         </section>
 
         <section class="section">
@@ -589,10 +594,10 @@
                 <div class="divider"></div>
                 <h2 class="invitation-title" data-aos="fade-down" data-aos-duration="2300">Дорогие друзья!</h2>
 
-                <p data-aos="fade-down" data-aos-duration="24000">
+                <p data-aos="fade-down" data-aos-duration="2400">
                     В этот торжественный день мы очень хотим оказаться в окружении самых близких и дорогих нам людей.
                 </p>
-                <p>
+                <p data-aos="fade-down" data-aos-duration="2400">
                     Приглашаем вас <br />
                     на свадебное торжество
                 </p>
@@ -606,14 +611,17 @@
         <!-- Date and Wedding Place Info Section -->
         <section class="section column details">
             <!-- <h3 class="section-title">Дата</h3> -->
-            <p class="details-date date">1 ноября 2024</p>
-            <p class="details-date">Сбор гостей 17.00</p>
+            <p class="details-date date" data-aos="fade-down" data-aos-duration="2400">1 ноября 2024</p>
+            <p class="details-date" data-aos="fade-down" data-aos-duration="2400">Сбор гостей 17.00</p>
         </section>
 
         <!-- Outro Section -->
         <section class="section column outro">
             <!-- <h3 class="section-title">Локация</h3> -->
-            <p>"Эго" ​Банкетный холл</p>
+            <p data-aos="fade-down" data-aos-duration="2400">
+                BANQUET HALL <br />
+                EGO
+            </p>
             <a href="https://go.2gis.com/008ei" target="_blank" class="location">Аалы Токомбаева улица, 43</a>
             <!-- <div class="map-container">
                 <div id="map" style="max-width: 500px; height: 400px"></div>
